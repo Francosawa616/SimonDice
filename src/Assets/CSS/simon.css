@@ -1,0 +1,176 @@
+@font-face {
+  font-family: 'Press Start 2P';
+  src: url('../Font/PressStart2P.ttf') format('truetype');
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: #000;
+  color: #fff;
+  font-family: 'Press Start 2P', cursive;
+  height: 100vh;
+  flex-direction: column;
+  margin: 0; 
+}
+
+h1 {
+  font-size: 48px;
+  margin-top: 40px;
+  letter-spacing: 8px;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  height: 400px;
+  margin-top: 40px;
+  flex-direction: row;
+}
+
+.game-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.btn {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin: 10px;
+  box-shadow: 0px 5px 0px #111;
+  cursor: pointer;
+  transition: transform 0.1s;
+}
+
+.green {
+  background-color: #5af78e;
+}
+
+.red {
+  background-color: #ff4858;
+}
+
+.yellow {
+  background-color: #ffb03b;
+}
+
+.blue {
+  background-color: #4cb3ff;
+}
+
+.btn:hover {
+  transform: translateY(10px);
+  box-shadow: 0px 5px 0px #111;
+}
+
+.btn:active {
+  transform: translateY(14px);
+  box-shadow: 0px 0px 0px #111;
+}
+
+.start-btn, .restart-btn {
+  display: inline-block;
+  padding: 16px 32px;
+  font-size: 24px;
+  font-weight: bold;
+  text-transform: uppercase;
+  border-radius: 8px;
+  background-color: #ffb03b;
+  color: #000;
+  text-decoration: none;
+  margin-top: 40px;
+  box-shadow: 0px 10px 0px #111;
+  transition: transform 0.1s;
+}
+
+.start-btn:hover, .restart-btn:hover {
+  transform: translateY(10px);
+  box-shadow: 0px 5px 0px #111;
+}
+
+.start-btn:active, .restart-btn:active {
+  transform: translateY(14px);
+  box-shadow: 0px 0px 0px #111;
+}
+
+.lost-message {
+  font-size: 36px;
+  margin-top: 40px;
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+#game-over-message {
+  display: none;
+  font-size: 3em;
+  margin-top: 50px;
+  color: red;
+}
+
+.back-link {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #f2f2f2;
+  color: #333;
+  text-decoration: none;
+  border-radius: 5px;
+  margin: 10px;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+
+.back-link:hover {
+  background-color: #ddd;
+}
+
+
+form {
+  text-align: center;
+  margin-top: 40px;
+}
+
+label {
+  font-size: 18px;
+  margin-right: 10px;
+}
+
+input[type="text"] {
+  padding: 10px;
+  font-size: 16px;
+  border: 2px solid #333;
+  border-radius: 5px;
+}
+
+button[type="submit"] {
+  padding: 10px 20px;
+  font-size: 18px;
+  background-color: #ffb03b;
+  border: none;
+  border-radius: 5px;
+  color: #000;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+  background-color: #ff8c00;
+}
